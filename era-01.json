@@ -1,0 +1,497 @@
+{
+ "era": 1,
+ "lessons": [
+  {
+   "id": "e1-l1",
+   "title": "Dein erstes Programm",
+   "boss": false,
+   "steps": [
+    {
+     "type": "info",
+     "title": "Annyeong, @@NAME@@! 👋",
+     "text": "Ich bin **Baemi**, die Code-Schlange von Byte Entertainment.\nDeine Gruppe **@@GRUPPE@@** debütiert bald – und wir brauchen jemanden, der Computern Befehle geben kann.\nDas machen wir mit **Python**. Python ist eine Programmiersprache: eine Sprache, die Menschen *und* Computer verstehen.",
+     "run": false
+    },
+    {
+     "type": "info",
+     "title": "Der erste Befehl: print",
+     "text": "Mit `print()` zeigt Python etwas auf dem Bildschirm an.\nWas angezeigt werden soll, kommt in die Klammern. Text steht immer in Anführungszeichen.\nTippe auf **Ausführen** und schau, was passiert.",
+     "code": "print(\"Hallo, Fans!\")",
+     "run": true
+    },
+    {
+     "type": "choice",
+     "q": "Welcher Befehl zeigt etwas auf dem Bildschirm an?",
+     "options": [
+      "print()",
+      "show()",
+      "zeige()",
+      "screen()"
+     ],
+     "answer": 0,
+     "explain": "print() ist der Befehl zum Anzeigen. Die anderen gibt es in Python so nicht.",
+     "mono": true
+    },
+    {
+     "type": "choice",
+     "q": "Was gibt dieses Programm aus?",
+     "code": "print(\"Daebak!\")",
+     "options": [
+      "Daebak!",
+      "\"Daebak!\"",
+      "print(\"Daebak!\")",
+      "Nichts"
+     ],
+     "explain": "Die Anführungszeichen zeigen Python nur, wo der Text anfängt und aufhört. Angezeigt werden sie nicht.",
+     "answer": 0,
+     "mono": true
+    },
+    {
+     "type": "fill",
+     "q": "Ergänze den Befehl, damit „Hallo, Yara!“ erscheint.",
+     "code": "___(\"Hallo, Yara!\")",
+     "solutions": [
+      [
+       "print"
+      ]
+     ],
+     "bank": [
+      "print",
+      "Print",
+      "show",
+      "text"
+     ],
+     "explain": "Klein geschrieben: print. Python unterscheidet Groß- und Kleinbuchstaben – Print funktioniert nicht."
+    },
+    {
+     "type": "choice",
+     "q": "Welche Zeile ist richtig geschrieben?",
+     "options": [
+      "print(\"Hwaiting!\")",
+      "print(Hwaiting!)",
+      "print \"Hwaiting!\"",
+      "Print(\"Hwaiting!\")"
+     ],
+     "answer": 0,
+     "explain": "Es braucht drei Dinge: print klein geschrieben, runde Klammern und Anführungszeichen um den Text.",
+     "mono": true
+    },
+    {
+     "type": "code",
+     "q": "Dein erstes eigenes Programm! Lass Python „@@GRUPPE@@ ist da!“ anzeigen.",
+     "starter": "print(\"\")",
+     "solution": "print(\"@@GRUPPE@@ ist da!\")",
+     "check": {
+      "includes": [
+       "@@GRUPPE@@ ist da"
+      ]
+     },
+     "hint": "Schreibe den Text zwischen die beiden Anführungszeichen.",
+     "explain": "Jjang! Genau so fängt jedes Programm an."
+    }
+   ]
+  },
+  {
+   "id": "e1-l2",
+   "title": "Text & Anführungszeichen",
+   "boss": false,
+   "steps": [
+    {
+     "type": "info",
+     "title": "Text heißt String",
+     "text": "Text in Anführungszeichen nennt man in Python **String** – eine Schnur aus Buchstaben.\nDu kannst doppelte `\" \"` oder einfache `' '` Anführungszeichen nehmen. Wichtig ist nur: Anfang und Ende müssen gleich sein.",
+     "code": "print(\"Hallo\")\nprint('Hallo')",
+     "run": true
+    },
+    {
+     "type": "choice",
+     "q": "Was gibt dieses Programm aus?",
+     "code": "print('Annyeong')",
+     "options": [
+      "Annyeong",
+      "'Annyeong'",
+      "Fehler",
+      "annyeong"
+     ],
+     "explain": "Einfache Anführungszeichen funktionieren genauso wie doppelte – angezeigt werden sie nicht.",
+     "answer": 0,
+     "mono": true
+    },
+    {
+     "type": "choice",
+     "q": "Welche Zeile führt zu einem Fehler?",
+     "options": [
+      "print(\"Hi\")",
+      "print('Hi')",
+      "print(\"Hi')",
+      "print(\"Hi!!!\")"
+     ],
+     "answer": 2,
+     "explain": "Anfang und Ende müssen zusammenpassen: \" mit \" oder ' mit '. Gemischt versteht Python das nicht.",
+     "mono": true
+    },
+    {
+     "type": "info",
+     "title": "Ohne Anführungszeichen?",
+     "text": "Fehlen die Anführungszeichen, denkt Python, du meinst einen Namen, den es kennen müsste – und meldet einen Fehler.\nProbier es aus. Keine Sorge: Fehlermeldungen sind Hinweise, kein Drama.",
+     "code": "print(Hallo)",
+     "run": true
+    },
+    {
+     "type": "bug",
+     "q": "Tippe auf die Zeile mit dem Fehler.",
+     "code": "print(\"Debüt-Show\")\nprint(\"Heute um 20 Uhr)\nprint(\"Seid dabei!\")",
+     "bugLine": 1,
+     "explain": "In Zeile 2 fehlt das schließende Anführungszeichen nach „Uhr“."
+    },
+    {
+     "type": "fill",
+     "q": "Setze die Anführungszeichen, damit ein gültiger String entsteht.",
+     "code": "print(___Lightstick an!___)",
+     "solutions": [
+      [
+       "\"",
+       "\""
+      ]
+     ],
+     "bank": [
+      "\"",
+      "\"",
+      "'",
+      "(",
+      ")"
+     ],
+     "explain": "Ein String braucht am Anfang und am Ende dasselbe Anführungszeichen."
+    },
+    {
+     "type": "choice",
+     "q": "Was gibt dieses Programm aus?",
+     "code": "print('Sie ruft: \"Hwaiting!\"')",
+     "options": [
+      "Sie ruft: \"Hwaiting!\"",
+      "Sie ruft: Hwaiting!",
+      "Fehler",
+      "'Sie ruft: \"Hwaiting!\"'"
+     ],
+     "explain": "Außen einfache, innen doppelte Anführungszeichen: So kann ein Text selbst Anführungszeichen enthalten.",
+     "answer": 0,
+     "mono": true
+    },
+    {
+     "type": "code",
+     "q": "Lass Python anzeigen: Fans rufen: \"@@GRUPPE@@!\" – mit den Anführungszeichen um den Namen.",
+     "starter": "print('')",
+     "solution": "print('Fans rufen: \"@@GRUPPE@@!\"')",
+     "check": {
+      "includes": [
+       "Fans rufen: \"@@GRUPPE@@"
+      ]
+     },
+     "hint": "Außen einfache Anführungszeichen ' ', innen doppelte \" \".",
+     "explain": "Perfekt – jetzt kannst du sogar Anführungszeichen anzeigen."
+    }
+   ]
+  },
+  {
+   "id": "e1-l3",
+   "title": "Zeile für Zeile",
+   "boss": false,
+   "steps": [
+    {
+     "type": "info",
+     "title": "Von oben nach unten",
+     "text": "Ein Programm kann viele Befehle haben. Python führt sie der Reihe nach aus – Zeile für Zeile, von oben nach unten.",
+     "code": "print(\"3\")\nprint(\"2\")\nprint(\"1\")\nprint(\"Showtime!\")",
+     "run": true
+    },
+    {
+     "type": "order",
+     "q": "Bring den Countdown in die richtige Reihenfolge.",
+     "lines": [
+      "print(\"3\")",
+      "print(\"2\")",
+      "print(\"1\")",
+      "print(\"Go!\")"
+     ],
+     "distractors": [],
+     "explain": "Python liest von oben nach unten – also muss die 3 ganz oben stehen.",
+     "accept": [
+      [
+       "print(\"3\")",
+       "print(\"2\")",
+       "print(\"1\")",
+       "print(\"Go!\")"
+      ]
+     ]
+    },
+    {
+     "type": "choice",
+     "q": "Was gibt dieses Programm aus?",
+     "code": "print(\"A\")\nprint(\"B\")\nprint(\"A\")",
+     "options": [
+      "A\nB\nA",
+      "A B A",
+      "ABA",
+      "A\nB"
+     ],
+     "explain": "Jedes print beginnt eine neue Zeile.",
+     "answer": 0,
+     "mono": true
+    },
+    {
+     "type": "info",
+     "title": "Leere Zeilen & mehrere Teile",
+     "text": "`print()` ohne Inhalt macht eine leere Zeile.\nMit Kommas packst du mehrere Teile in ein print. Python setzt automatisch ein Leerzeichen dazwischen – auch vor das Ausrufezeichen, wie du gleich siehst.",
+     "code": "print(\"Hallo\", \"Yara\")\nprint()\nprint(\"Bis\", \"gleich\", \"!\")",
+     "run": true
+    },
+    {
+     "type": "choice",
+     "q": "Was gibt dieses Programm aus?",
+     "code": "print(\"Light\", \"stick\")",
+     "options": [
+      "Light stick",
+      "Lightstick",
+      "Light, stick",
+      "\"Light\" \"stick\""
+     ],
+     "explain": "Das Komma trennt die Teile, Python fügt ein Leerzeichen ein. Das Komma selbst wird nicht angezeigt.",
+     "answer": 0,
+     "mono": true
+    },
+    {
+     "type": "choice",
+     "q": "Wie viele Zeilen gibt dieses Programm aus?",
+     "options": [
+      "3",
+      "2",
+      "1",
+      "4"
+     ],
+     "answer": 0,
+     "explain": "print() erzeugt eine leere Zeile – und die zählt mit: Hi, leere Zeile, Bye.",
+     "code": "print(\"Hi\")\nprint()\nprint(\"Bye\")",
+     "mono": false
+    },
+    {
+     "type": "fill",
+     "q": "Ergänze, damit „Stray Kids debütierte 2018“ erscheint.",
+     "code": "print(\"Stray Kids\", ___, \"2018\")",
+     "solutions": [
+      [
+       "\"debütierte\""
+      ]
+     ],
+     "bank": [
+      "\"debütierte\"",
+      "debütierte",
+      "\"2018\"",
+      "\",\""
+     ],
+     "explain": "Text braucht Anführungszeichen. Die Leerzeichen setzt Python zwischen die Teile automatisch."
+    },
+    {
+     "type": "code",
+     "q": "Schreibe ein Programm mit drei Zeilen: deinen Namen, deine Lieblingsgruppe und „Hwaiting!“.",
+     "starter": "print(\"Yara\")\n",
+     "solution": "print(\"Yara\")\nprint(\"TWICE\")\nprint(\"Hwaiting!\")",
+     "check": {
+      "minLines": 3,
+      "includes": [
+       "hwaiting"
+      ]
+     },
+     "hint": "Für jede Zeile brauchst du ein eigenes print.",
+     "explain": "Daebak! Drei Befehle, drei Zeilen – du denkst schon wie Python."
+    }
+   ]
+  },
+  {
+   "id": "e1-l4",
+   "title": "Kommentare & Fehlermeldungen",
+   "boss": false,
+   "steps": [
+    {
+     "type": "info",
+     "title": "Notizen im Code",
+     "text": "Alles nach einer Raute `#` ignoriert Python. Das nennt man **Kommentar**.\nSo schreibst du Notizen für dich und andere – oder schaltest eine Zeile kurz aus.",
+     "code": "# Ansage für die Debüt-Show\nprint(\"Willkommen!\")  # erscheint auf dem Bildschirm\n# print(\"Das hier nicht\")",
+     "run": true
+    },
+    {
+     "type": "choice",
+     "q": "Was gibt dieses Programm aus?",
+     "code": "# print(\"Eins\")\nprint(\"Zwei\")",
+     "options": [
+      "Zwei",
+      "Eins\nZwei",
+      "# print(\"Eins\")\nZwei",
+      "Nichts"
+     ],
+     "explain": "Die erste Zeile ist ein Kommentar und wird übersprungen.",
+     "answer": 0,
+     "mono": true
+    },
+    {
+     "type": "choice",
+     "q": "Wofür sind Kommentare gut?",
+     "options": [
+      "Für Notizen, die den Code erklären",
+      "Damit das Programm schneller läuft",
+      "Damit Text auf dem Bildschirm erscheint",
+      "Sie reparieren Fehler automatisch"
+     ],
+     "answer": 0,
+     "explain": "Kommentare sind für Menschen. Python liest sie gar nicht.",
+     "mono": false
+    },
+    {
+     "type": "info",
+     "title": "Fehler sind normal",
+     "text": "Selbst Profis sehen jeden Tag Fehlermeldungen. Sie verraten dir die **Zeile** und die **Art** des Fehlers.\n**SyntaxError**: Die Schreibweise stimmt nicht, zum Beispiel fehlt eine Klammer oder ein Anführungszeichen.\n**NameError**: Python kennt ein Wort nicht. Oft ein Tippfehler.\n**IndentationError**: Eine Zeile beginnt mit Leerzeichen, obwohl sie das nicht darf.",
+     "run": false
+    },
+    {
+     "type": "bug",
+     "q": "Wo ist der Fehler?",
+     "code": "print(\"Setlist:\")\nprint(\"1. Intro\")\nPrint(\"2. Debütsong\")",
+     "bugLine": 2,
+     "explain": "Zeile 3: Print ist groß geschrieben. Python kennt nur print – klein."
+    },
+    {
+     "type": "bug",
+     "q": "Hier fehlt etwas. Wo?",
+     "code": "print(\"Album: Pixel Heart\"\nprint(\"Release: Freitag\")",
+     "bugLine": 0,
+     "explain": "In Zeile 1 fehlt die schließende Klammer am Ende."
+    },
+    {
+     "type": "choice",
+     "q": "Python meldet: NameError: name 'Hallo' is not defined. Was ist wahrscheinlich passiert?",
+     "options": [
+      "Bei Hallo fehlen die Anführungszeichen",
+      "Das Programm ist zu lang",
+      "Der Computer ist kaputt",
+      "print ist falsch geschrieben"
+     ],
+     "answer": 0,
+     "explain": "Ohne Anführungszeichen sucht Python nach etwas namens Hallo – und findet es nicht.",
+     "mono": false
+    },
+    {
+     "type": "code",
+     "q": "Repariere das Programm, damit es läuft.",
+     "starter": "print(\"Ticket gekauft!)\nprint(Wir sehen uns!)",
+     "solution": "print(\"Ticket gekauft!\")\nprint(\"Wir sehen uns!\")",
+     "check": {
+      "includes": [
+       "Ticket gekauft!",
+       "Wir sehen uns!"
+      ]
+     },
+     "hint": "Zähle die Anführungszeichen: Jeder Text braucht genau zwei.",
+     "explain": "Bug gefixt! Fehler finden ist eine echte Superkraft."
+    }
+   ]
+  },
+  {
+   "id": "e1-l5",
+   "title": "Finale: Deine Debüt-Ansage",
+   "boss": true,
+   "steps": [
+    {
+     "type": "info",
+     "title": "Era-Finale! 👑",
+     "text": "@@NAME@@, jetzt kommt alles zusammen: print, Strings, mehrere Zeilen und Kommentare.\nDas Finale bringt doppelte XP – und am Ende wartet ein Album auf dich.",
+     "run": false
+    },
+    {
+     "type": "choice",
+     "q": "Was gibt dieses Programm aus?",
+     "code": "print(\"@@GRUPPE@@\")\nprint()\nprint(\"Debüt\", \"am\", \"Freitag\")",
+     "options": [
+      "@@GRUPPE@@\n\nDebüt am Freitag",
+      "@@GRUPPE@@\nDebüt am Freitag",
+      "@@GRUPPE@@\n\nDebütamFreitag",
+      "Fehler"
+     ],
+     "explain": "Das leere print() erzeugt die Leerzeile, die Kommas werden zu Leerzeichen.",
+     "answer": 0,
+     "mono": true
+    },
+    {
+     "type": "order",
+     "q": "Bau die Ansage in der richtigen Reihenfolge. Achtung: Ein Baustein ist falsch!",
+     "lines": [
+      "print(\"Liebe Fans,\")",
+      "print(\"bald ist es so weit:\")",
+      "print(\"@@GRUPPE@@ debütiert!\")"
+     ],
+     "distractors": [
+      "print(bald ist es so weit:)"
+     ],
+     "explain": "Der falsche Baustein hat keine Anführungszeichen um den Text.",
+     "accept": [
+      [
+       "print(\"Liebe Fans,\")",
+       "print(\"bald ist es so weit:\")",
+       "print(\"@@GRUPPE@@ debütiert!\")"
+      ]
+     ]
+    },
+    {
+     "type": "bug",
+     "q": "Warum stürzt dieses Programm ab?",
+     "code": "print(\"Debüt-Countdown\")\n print(\"Noch 3 Tage\")\nprint(\"Hwaiting!\")",
+     "bugLine": 1,
+     "explain": "Zeile 2 beginnt mit einem Leerzeichen. Python nimmt Einrückungen ernst – ohne Grund darf keine Zeile eingerückt sein."
+    },
+    {
+     "type": "fill",
+     "q": "Ergänze den Kommentar und den Text.",
+     "code": "___ Ansage für Freitag\nprint(___)",
+     "solutions": [
+      [
+       "#",
+       "\"Willkommen zur Show!\""
+      ]
+     ],
+     "bank": [
+      "#",
+      "//",
+      "\"Willkommen zur Show!\"",
+      "Willkommen zur Show!"
+     ],
+     "explain": "Kommentare beginnen in Python mit #. Text braucht Anführungszeichen."
+    },
+    {
+     "type": "choice",
+     "q": "Was zeigt `print(\"Hi\", \"Fans\", \"!\")` an?",
+     "options": [
+      "Hi Fans !",
+      "Hi Fans!",
+      "HiFans!",
+      "\"Hi\" \"Fans\" \"!\""
+     ],
+     "answer": 0,
+     "explain": "Zwischen alle Teile kommt ein Leerzeichen – auch vor das Ausrufezeichen.",
+     "mono": true
+    },
+    {
+     "type": "code",
+     "q": "Schreibe deine Debüt-Ansage! Mindestens 3 Zeilen, eine davon mit dem Gruppennamen @@GRUPPE@@. Ein Kommentar ist Bonus-Style.",
+     "starter": "# Meine Debüt-Ansage\n",
+     "solution": "# Meine Debüt-Ansage\nprint(\"Hallo, Welt!\")\nprint(\"Wir sind @@GRUPPE@@\")\nprint(\"Danke, dass ihr da seid!\")",
+     "check": {
+      "minLines": 3,
+      "includes": [
+       "@@GRUPPE@@"
+      ]
+     },
+     "hint": "Drei print-Zeilen, und in einer steht @@GRUPPE@@.",
+     "explain": "Das war deine erste eigene Show. Era 1 abgeschlossen!"
+    }
+   ]
+  }
+ ]
+}

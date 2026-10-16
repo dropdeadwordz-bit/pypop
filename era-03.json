@@ -1,0 +1,627 @@
+{
+ "era": 3,
+ "lessons": [
+  {
+   "id": "e3-l1",
+   "title": "Python rechnet",
+   "boss": false,
+   "steps": [
+    {
+     "type": "info",
+     "title": "Zahlen ohne Anführungszeichen",
+     "text": "Zahlen schreibst du **ohne** Anführungszeichen. Dann kann Python mit ihnen rechnen:\n`+` plus, `-` minus, `*` mal, `/` geteilt.\nWarum bei 20 / 4 eine 5.0 herauskommt, klären wir in der nächsten Lektion.",
+     "code": "print(2 + 3)\nprint(10 - 4)\nprint(6 * 7)\nprint(20 / 4)",
+     "run": true
+    },
+    {
+     "type": "choice",
+     "q": "Was gibt dieses Programm aus?",
+     "code": "print(7 * 3)",
+     "options": [
+      "21",
+      "7 * 3",
+      "73",
+      "10"
+     ],
+     "explain": "Ohne Anführungszeichen rechnet Python: 7 mal 3 ist 21.",
+     "answer": 0,
+     "mono": true
+    },
+    {
+     "type": "choice",
+     "q": "Welches Zeichen bedeutet „mal“ in Python?",
+     "options": [
+      "*",
+      "x",
+      "×",
+      "·"
+     ],
+     "answer": 0,
+     "explain": "Python nimmt den Stern *. Ein x wäre für Python ein Name.",
+     "mono": true
+    },
+    {
+     "type": "choice",
+     "q": "Was gibt dieses Programm aus?",
+     "code": "print(\"7 * 3\")",
+     "options": [
+      "7 * 3",
+      "21",
+      "Fehler",
+      "\"7 * 3\""
+     ],
+     "explain": "In Anführungszeichen ist es Text. Python rechnet nicht, sondern zeigt den Text an.",
+     "answer": 0,
+     "mono": true
+    },
+    {
+     "type": "info",
+     "title": "Rechnen mit echten Daten",
+     "text": "BTS debütierte 2013, ILLIT 2024. Wie viele Jahre liegen dazwischen? Lass Python rechnen.",
+     "code": "print(2024 - 2013)",
+     "run": true
+    },
+    {
+     "type": "fill",
+     "q": "SEVENTEEN hat drei Units mit 4, 5 und 4 Mitgliedern. Ergänze, damit die Gesamtzahl erscheint.",
+     "code": "print(4 ___ 5 ___ 4)",
+     "solutions": [
+      [
+       "+",
+       "+"
+      ]
+     ],
+     "bank": [
+      "+",
+      "+",
+      "*",
+      "-",
+      "/"
+     ],
+     "explain": "4 + 5 + 4 = 13 – genau so viele Mitglieder hat SEVENTEEN."
+    },
+    {
+     "type": "code",
+     "q": "Ein Konzertticket kostet 89 Euro. Lass Python ausrechnen, was 3 Tickets kosten.",
+     "starter": "print()",
+     "solution": "print(89 * 3)",
+     "check": {
+      "exact": "267",
+      "codeIncludes": [
+       "*"
+      ]
+     },
+     "hint": "In die Klammern kommt die Rechnung: 89 mal 3.",
+     "explain": "267 Euro – Python ist schneller als jeder Taschenrechner."
+    }
+   ]
+  },
+  {
+   "id": "e3-l2",
+   "title": "Ganze Zahlen & Kommazahlen",
+   "boss": false,
+   "steps": [
+    {
+     "type": "info",
+     "title": "int und float",
+     "text": "Python kennt zwei Arten von Zahlen:\n**int** sind ganze Zahlen wie `7` oder `2024`.\n**float** sind Kommazahlen wie `3.5`.\nAchtung: Das Komma schreibt Python als **Punkt**. Und `/` ergibt immer einen float – auch wenn es glatt aufgeht.",
+     "code": "print(7)\nprint(3.5)\nprint(10 / 4)\nprint(20 / 4)",
+     "run": true
+    },
+    {
+     "type": "choice",
+     "q": "Was gibt dieses Programm aus?",
+     "code": "print(9 / 3)",
+     "options": [
+      "3.0",
+      "3",
+      "3,0",
+      "Fehler"
+     ],
+     "explain": "Geteilt mit / liefert immer eine Kommazahl, deshalb 3.0.",
+     "answer": 0,
+     "mono": true
+    },
+    {
+     "type": "choice",
+     "q": "Wie schreibst du dreieinhalb in Python?",
+     "options": [
+      "3.5",
+      "3,5",
+      "3 1/2",
+      "drei.fünf"
+     ],
+     "answer": 0,
+     "explain": "Python verwendet den Punkt als Dezimaltrennzeichen – wie im Englischen.",
+     "mono": true
+    },
+    {
+     "type": "choice",
+     "q": "Was gibt dieses Programm aus?",
+     "code": "print(2.5 + 2.5)",
+     "options": [
+      "5.0",
+      "5",
+      "4.10",
+      "5,0"
+     ],
+     "explain": "Kommt ein float in der Rechnung vor, ist auch das Ergebnis ein float.",
+     "answer": 0,
+     "mono": true
+    },
+    {
+     "type": "choice",
+     "q": "Was ist 2024 ohne Anführungszeichen?",
+     "options": [
+      "Ein int (ganze Zahl)",
+      "Ein float (Kommazahl)",
+      "Ein String (Text)",
+      "Gar nichts"
+     ],
+     "answer": 0,
+     "explain": "Ganze Zahl ohne Punkt, ohne Anführungszeichen: ein int.",
+     "mono": false
+    },
+    {
+     "type": "choice",
+     "q": "Und was ist \"2024\" – mit Anführungszeichen?",
+     "options": [
+      "Ein String (Text)",
+      "Ein int",
+      "Ein float",
+      "Ein Fehler"
+     ],
+     "answer": 0,
+     "explain": "Anführungszeichen machen alles zu Text – auch Ziffern.",
+     "mono": false
+    },
+    {
+     "type": "code",
+     "q": "Ein Lightstick kostet 45.50 Euro. Berechne den Preis für 2 Stück.",
+     "starter": "print()",
+     "solution": "print(45.50 * 2)",
+     "check": {
+      "exact": "91.0",
+      "codeIncludes": [
+       "*"
+      ]
+     },
+     "hint": "Denk an den Punkt statt Komma: 45.50 * 2",
+     "explain": "91.0 – mit dem Punkt hat Python alles richtig verstanden."
+    }
+   ]
+  },
+  {
+   "id": "e3-l3",
+   "title": "Spezial-Rechenzeichen",
+   "boss": false,
+   "steps": [
+    {
+     "type": "info",
+     "title": "Drei Extra-Werkzeuge",
+     "text": "`//` teilt ganzzahlig: Der Rest wird abgeschnitten.\n`%` gibt den Rest beim Teilen. Das heißt Modulo.\n`**` bedeutet hoch: 2 ** 3 ist 2 · 2 · 2.",
+     "code": "print(17 // 5)\nprint(17 % 5)\nprint(2 ** 3)",
+     "run": true
+    },
+    {
+     "type": "info",
+     "title": "Wofür ist das gut?",
+     "text": "23 Fans wollen in Vierergruppen zum Fansign.\n`23 // 4` ergibt 5 volle Gruppen, `23 % 4` die 3 Fans, die übrig bleiben.",
+     "code": "print(23 // 4)\nprint(23 % 4)",
+     "run": true
+    },
+    {
+     "type": "choice",
+     "q": "Was gibt dieses Programm aus?",
+     "code": "print(10 % 3)",
+     "options": [
+      "1",
+      "3",
+      "3.33",
+      "0"
+     ],
+     "explain": "10 geteilt durch 3 ist 3, Rest 1. % liefert den Rest.",
+     "answer": 0,
+     "mono": true
+    },
+    {
+     "type": "choice",
+     "q": "Was gibt dieses Programm aus?",
+     "code": "print(10 // 3)",
+     "options": [
+      "3",
+      "3.3333333333333335",
+      "1",
+      "3.0"
+     ],
+     "explain": "// schneidet alles nach dem Komma ab und liefert eine ganze Zahl.",
+     "answer": 0,
+     "mono": true
+    },
+    {
+     "type": "info",
+     "title": "Punkt vor Strich",
+     "text": "Wie in Mathe: `*` und `/` kommen vor `+` und `-`.\nMit Klammern bestimmst du selbst, was zuerst gerechnet wird.",
+     "code": "print(2 + 3 * 4)\nprint((2 + 3) * 4)",
+     "run": true
+    },
+    {
+     "type": "choice",
+     "q": "Was gibt dieses Programm aus?",
+     "code": "print(10 - 2 * 3)",
+     "options": [
+      "4",
+      "24",
+      "6",
+      "-4"
+     ],
+     "explain": "Erst 2 * 3 = 6, dann 10 - 6 = 4.",
+     "answer": 0,
+     "mono": true
+    },
+    {
+     "type": "fill",
+     "q": "TWICE hat 9 Mitglieder. Jede bekommt 2 Blumensträuße, dazu kommen 5 fürs Team. Ergänze, damit 23 herauskommt.",
+     "code": "print(9 ___ 2 ___ 5)",
+     "solutions": [
+      [
+       "*",
+       "+"
+      ]
+     ],
+     "bank": [
+      "*",
+      "+",
+      "-",
+      "/",
+      "%"
+     ],
+     "explain": "9 * 2 = 18 Sträuße für die Mitglieder, plus 5 sind 23."
+    },
+    {
+     "type": "code",
+     "q": "50 Photocards werden fair auf 8 Fans verteilt. Gib in zwei Zeilen aus, wie viele jede bekommt und wie viele übrig bleiben.",
+     "starter": "print()\nprint()",
+     "solution": "print(50 // 8)\nprint(50 % 8)",
+     "check": {
+      "exact": "6\n2",
+      "codeIncludes": [
+       "//",
+       "%"
+      ]
+     },
+     "hint": "Oben 50 // 8, unten 50 % 8.",
+     "explain": "6 für jede, 2 bleiben übrig. Fair verteilt!"
+    }
+   ]
+  },
+  {
+   "id": "e3-l4",
+   "title": "Zahlen in Variablen",
+   "boss": false,
+   "steps": [
+    {
+     "type": "info",
+     "title": "Rechnen mit Variablen",
+     "text": "Zahlen kannst du in Variablen speichern und mit ihnen rechnen – Python setzt die Werte ein.",
+     "code": "streams_montag = 1200\nstreams_dienstag = 3400\ngesamt = streams_montag + streams_dienstag\nprint(gesamt)",
+     "run": true
+    },
+    {
+     "type": "choice",
+     "q": "Was gibt dieses Programm aus?",
+     "code": "ticket = 60\nanzahl = 4\nprint(ticket * anzahl)",
+     "options": [
+      "240",
+      "ticket * anzahl",
+      "604",
+      "64"
+     ],
+     "explain": "60 mal 4 ist 240. Python rechnet mit den Werten in den Variablen.",
+     "answer": 0,
+     "mono": true
+    },
+    {
+     "type": "info",
+     "title": "Hochzählen",
+     "text": "Neue Streams kommen dazu? Nimm den alten Wert, rechne etwas dazu und speichere das Ergebnis wieder in derselben Variable:\n`streams = streams + 500`\nDie Abkürzung `streams += 500` macht genau dasselbe.",
+     "code": "streams = 1000\nstreams = streams + 500\nprint(streams)\nstreams += 500\nprint(streams)",
+     "run": true
+    },
+    {
+     "type": "choice",
+     "q": "Was gibt dieses Programm aus?",
+     "code": "likes = 10\nlikes = likes + 5\nlikes = likes * 2\nprint(likes)",
+     "options": [
+      "30",
+      "20",
+      "25",
+      "15"
+     ],
+     "explain": "10 + 5 = 15, dann 15 * 2 = 30.",
+     "answer": 0,
+     "mono": true
+    },
+    {
+     "type": "fill",
+     "q": "Erhöhe die Follower um 100.",
+     "code": "follower = 900\nfollower ___ 100\nprint(follower)",
+     "solutions": [
+      [
+       "+="
+      ]
+     ],
+     "bank": [
+      "+=",
+      "=",
+      "==",
+      "-="
+     ],
+     "explain": "+= 100 heißt: zum alten Wert 100 dazurechnen."
+    },
+    {
+     "type": "choice",
+     "q": "Was gibt dieses Programm aus?",
+     "code": "platz = 5\nplatz -= 4\nprint(\"Chart-Platz:\", platz)",
+     "options": [
+      "Chart-Platz: 1",
+      "Chart-Platz: 9",
+      "Chart-Platz: 5",
+      "Chart-Platz: -4"
+     ],
+     "explain": "-= 4 zieht 4 ab: aus Platz 5 wird Platz 1.",
+     "answer": 0,
+     "mono": true
+    },
+    {
+     "type": "order",
+     "q": "Ordne den Code so, dass 300 ausgegeben wird.",
+     "lines": [
+      "fans = 100",
+      "fans = fans * 2",
+      "fans = fans + 100",
+      "print(fans)"
+     ],
+     "distractors": [],
+     "explain": "100 * 2 = 200, dann + 100 = 300. Andersherum kämen 400 heraus.",
+     "accept": [
+      [
+       "fans = 100",
+       "fans = fans * 2",
+       "fans = fans + 100",
+       "print(fans)"
+      ]
+     ]
+    },
+    {
+     "type": "code",
+     "q": "Ein Album verkauft sich am ersten Tag 2500-mal und am zweiten 1800-mal. Speichere beide Zahlen in Variablen, rechne die Summe in die Variable gesamt und gib sie aus.",
+     "starter": "tag1 = 2500\n",
+     "solution": "tag1 = 2500\ntag2 = 1800\ngesamt = tag1 + tag2\nprint(gesamt)",
+     "check": {
+      "exact": "4300",
+      "codeIncludes": [
+       "gesamt ="
+      ]
+     },
+     "hint": "tag2 = 1800, dann gesamt = tag1 + tag2 und print(gesamt).",
+     "explain": "4300 Alben in zwei Tagen. Daebak!"
+    }
+   ]
+  },
+  {
+   "id": "e3-l5",
+   "title": "Zahl oder Text?",
+   "boss": false,
+   "steps": [
+    {
+     "type": "info",
+     "title": "\"5\" ist nicht 5",
+     "text": "Mit Anführungszeichen ist eine Zahl Text. Und `+` macht bei Text etwas anderes: Es **klebt** die Texte zusammen.",
+     "code": "print(5 + 5)\nprint(\"5\" + \"5\")",
+     "run": true
+    },
+    {
+     "type": "choice",
+     "q": "Was gibt dieses Programm aus?",
+     "code": "print(\"Light\" + \"stick\")",
+     "options": [
+      "Lightstick",
+      "Light stick",
+      "Light + stick",
+      "Fehler"
+     ],
+     "explain": "+ klebt Strings ohne Leerzeichen zusammen.",
+     "answer": 0,
+     "mono": true
+    },
+    {
+     "type": "choice",
+     "q": "Was gibt dieses Programm aus?",
+     "code": "print(\"10\" + \"20\")",
+     "options": [
+      "1020",
+      "30",
+      "10 20",
+      "Fehler"
+     ],
+     "explain": "Beides sind Strings, also wird geklebt statt gerechnet.",
+     "answer": 0,
+     "mono": true
+    },
+    {
+     "type": "choice",
+     "q": "Was gibt dieses Programm aus?",
+     "code": "print(\"Bang\" * 3)",
+     "options": [
+      "BangBangBang",
+      "Bang Bang Bang",
+      "Fehler",
+      "Bang3"
+     ],
+     "explain": "Ein String mal eine Zahl wiederholt den Text.",
+     "answer": 0,
+     "mono": true
+    },
+    {
+     "type": "info",
+     "title": "Text + Zahl geht nicht",
+     "text": "Text und Zahl mit `+` mischen kann Python nicht. Probier es aus:",
+     "code": "print(\"Platz \" + 1)",
+     "run": true
+    },
+    {
+     "type": "info",
+     "title": "Umwandeln mit str() und int()",
+     "text": "`str(zahl)` macht aus einer Zahl Text.\n`int(text)` macht aus Text eine ganze Zahl.\nDann passt alles zusammen.",
+     "code": "platz = 1\nprint(\"Platz \" + str(platz))\nprint(int(\"7\") + 3)",
+     "run": true
+    },
+    {
+     "type": "bug",
+     "q": "Wo kracht es?",
+     "code": "jahre = 5\nprint(\"Seit \" + jahre + \" Jahren Fan!\")",
+     "bugLine": 1,
+     "explain": "jahre ist eine Zahl. Mit str(jahre) wird daraus Text – dann klappt das Zusammenkleben."
+    },
+    {
+     "type": "fill",
+     "q": "Repariere den Code mit der richtigen Umwandlung.",
+     "code": "print(\"Mitglieder: \" + ___(13))",
+     "solutions": [
+      [
+       "str"
+      ]
+     ],
+     "bank": [
+      "str",
+      "int",
+      "float",
+      "print"
+     ],
+     "explain": "Damit + kleben kann, muss die 13 zu Text werden: str(13)."
+    },
+    {
+     "type": "code",
+     "q": "Gib „ATEEZ hat 8 Mitglieder“ aus. Die 8 soll aus der Variable anzahl kommen und mit + und str() eingebaut werden.",
+     "starter": "anzahl = 8\n",
+     "solution": "anzahl = 8\nprint(\"ATEEZ hat \" + str(anzahl) + \" Mitglieder\")",
+     "check": {
+      "exact": "ATEEZ hat 8 Mitglieder",
+      "codeIncludes": [
+       "str(anzahl)"
+      ]
+     },
+     "hint": "Bau es so: \"ATEEZ hat \" + str(anzahl) + \" Mitglieder\" – auf die Leerzeichen in den Strings achten.",
+     "explain": "Text und Zahl perfekt kombiniert!"
+    }
+   ]
+  },
+  {
+   "id": "e3-l6",
+   "title": "Finale: Chart-Rechner",
+   "boss": true,
+   "steps": [
+    {
+     "type": "info",
+     "title": "Era-Finale! 👑",
+     "text": "@@NAME@@, die erste Woche von @@GRUPPE@@ ist vorbei! Rechne die Ergebnisse aus – mit allem, was du über Zahlen weißt.",
+     "run": false
+    },
+    {
+     "type": "choice",
+     "q": "Was gibt dieses Programm aus?",
+     "code": "streams = 4000\nstreams += 1000\nprint(streams // 1000, \"Tausend Streams\")",
+     "options": [
+      "5 Tausend Streams",
+      "5.0 Tausend Streams",
+      "4 Tausend Streams",
+      "5000 Tausend Streams"
+     ],
+     "explain": "4000 + 1000 = 5000, und 5000 // 1000 = 5.",
+     "answer": 0,
+     "mono": true
+    },
+    {
+     "type": "fill",
+     "q": "Ergänze, damit „Gesamt: 75 Euro“ erscheint.",
+     "code": "preis = 25\nalben = 3\nprint(\"Gesamt: \" + ___(preis ___ alben) + \" Euro\")",
+     "solutions": [
+      [
+       "str",
+       "*"
+      ]
+     ],
+     "bank": [
+      "str",
+      "int",
+      "*",
+      "+",
+      "//"
+     ],
+     "explain": "Erst 25 * 3 rechnen, dann mit str() in Text verwandeln."
+    },
+    {
+     "type": "bug",
+     "q": "Wo kracht es?",
+     "code": "views = 2000000\nlikes = 150000\nprint(\"Like-Quote: \" + likes / views * 100)",
+     "bugLine": 2,
+     "explain": "Das Ergebnis der Rechnung ist eine Zahl. Um sie an den Text zu kleben, braucht es str(...)."
+    },
+    {
+     "type": "order",
+     "q": "Ordne den Code so, dass „Neu auf Platz 3“ erscheint. Ein Baustein ist falsch!",
+     "lines": [
+      "platz = 10",
+      "platz = platz - 7",
+      "print(\"Neu auf Platz \" + str(platz))"
+     ],
+     "distractors": [
+      "print(\"Neu auf Platz \" + platz)"
+     ],
+     "explain": "Ohne str() kann Python Text und Zahl nicht zusammenkleben.",
+     "accept": [
+      [
+       "platz = 10",
+       "platz = platz - 7",
+       "print(\"Neu auf Platz \" + str(platz))"
+      ]
+     ]
+    },
+    {
+     "type": "choice",
+     "q": "Was gibt dieses Programm aus?",
+     "code": "a = 7\nb = 2\nprint(a // b, a % b)",
+     "options": [
+      "3 1",
+      "3.5 1",
+      "3 0",
+      "3.5 0"
+     ],
+     "explain": "7 // 2 = 3, und 7 % 2 = 1 bleibt übrig.",
+     "answer": 0,
+     "mono": true
+    },
+    {
+     "type": "code",
+     "q": "Speichere die Streams von Montag (12000), Dienstag (15000) und Mittwoch (9000) in Variablen. Gib dann in zwei Zeilen die Summe und den Durchschnitt pro Tag aus.",
+     "starter": "montag = 12000\n",
+     "solution": "montag = 12000\ndienstag = 15000\nmittwoch = 9000\nsumme = montag + dienstag + mittwoch\nprint(summe)\nprint(summe / 3)",
+     "check": {
+      "minLines": 2,
+      "includes": [
+       "36000",
+       "12000"
+      ],
+      "codeIncludes": [
+       "/"
+      ],
+      "minAssign": 3
+     },
+     "hint": "Summe: alle drei addieren. Durchschnitt: Summe geteilt durch 3.",
+     "explain": "Chart-Rechner fertig – Era 3 abgeschlossen!"
+    }
+   ]
+  }
+ ]
+}

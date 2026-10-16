@@ -1,0 +1,14 @@
+[
+ {"era": 1, "name": "Debut", "topic": "Hallo, Python!", "teaser": "Deine Gruppe steht vor dem Debüt. Erste Mission: Python zum Sprechen bringen.", "c1": "#FF6FB0", "c2": "#FFC2DD", "icon": "🎤"},
+ {"era": 2, "name": "Profile", "topic": "Variablen", "teaser": "Jedes Mitglied braucht ein Profil – und Python muss sich Dinge merken.", "c1": "#9B6BFF", "c2": "#D9C8FF", "icon": "🪪"},
+ {"era": 3, "name": "Charts", "topic": "Zahlen & Rechnen", "teaser": "Streams, Tickets, Chart-Plätze: Python wird dein Rechen-Genie.", "c1": "#22C7A0", "c2": "#B5F5E2", "icon": "📈"},
+ {"era": 4, "name": "Fan Chant", "topic": "Texte & f-Strings", "teaser": "Fan-Chants, Hashtags, Slogans: Texte bauen wie ein Profi.", "c1": "#FF9F43", "c2": "#FFE0B8", "icon": "📣"},
+ {"era": 5, "name": "Fan Talk", "topic": "Eingaben mit input()", "teaser": "Dein Programm stellt Fragen – und reagiert auf Antworten.", "c1": "#4F8BFF", "c2": "#C7DAFF", "icon": "💬"},
+ {"era": 6, "name": "Music Show", "topic": "Entscheidungen mit if", "teaser": "Wer gewinnt die Music Show? Python entscheidet.", "c1": "#FF5A6E", "c2": "#FFC9D0", "icon": "🏆"},
+ {"era": 7, "name": "Countdown", "topic": "while-Schleifen", "teaser": "10, 9, 8 … bis zum Comeback zählen, ohne 100 Zeilen zu tippen.", "c1": "#6C5CE7", "c2": "#D3CCFF", "icon": "⏳"},
+ {"era": 8, "name": "Setlist", "topic": "for-Schleifen & range", "teaser": "Song für Song durch die Setlist – automatisch.", "c1": "#00B5D8", "c2": "#BDF1FF", "icon": "🎶"},
+ {"era": 9, "name": "Photocards", "topic": "Listen", "teaser": "Sammeln, sortieren, tauschen: Listen sind dein Binder.", "c1": "#E056C1", "c2": "#F8C9EE", "icon": "🃏"},
+ {"era": 10, "name": "Choreo", "topic": "Funktionen", "teaser": "Ein Move, ein Name – und jederzeit abrufbar.", "c1": "#F7B731", "c2": "#FFEDB8", "icon": "💃"},
+ {"era": 11, "name": "Fandom", "topic": "Dictionaries", "teaser": "Die große Fan-Datenbank: alles schnell nachschlagen.", "c1": "#20BF6B", "c2": "#BFF2D6", "icon": "📒"},
+ {"era": 12, "name": "World Tour", "topic": "Abschlussprojekte", "teaser": "Quiz, Zahlenraten, Text-Adventure: deine eigenen Programme.", "c1": "#8854D0", "c2": "#FF8FC7", "icon": "🌍"}
+]

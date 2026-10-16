@@ -1,0 +1,505 @@
+{
+ "era": 2,
+ "lessons": [
+  {
+   "id": "e2-l1",
+   "title": "Was ist eine Variable?",
+   "boss": false,
+   "steps": [
+    {
+     "type": "info",
+     "title": "Eine Box mit Namensschild",
+     "text": "Eine **Variable** ist wie eine Box mit Namensschild. Du legst einen Wert hinein und holst ihn später über den Namen wieder heraus.\nDas `=` bedeutet: Lege den Wert rechts in die Box links.",
+     "code": "gruppe = \"@@GRUPPE@@\"\nprint(gruppe)",
+     "run": true
+    },
+    {
+     "type": "choice",
+     "q": "Was gibt dieses Programm aus?",
+     "code": "song = \"Pixel Heart\"\nprint(song)",
+     "options": [
+      "Pixel Heart",
+      "song",
+      "\"Pixel Heart\"",
+      "Fehler"
+     ],
+     "explain": "print(song) holt den Inhalt der Box song heraus.",
+     "answer": 0,
+     "mono": true
+    },
+    {
+     "type": "choice",
+     "q": "Was gibt dieses Programm aus?",
+     "code": "song = \"Pixel Heart\"\nprint(\"song\")",
+     "options": [
+      "song",
+      "Pixel Heart",
+      "Fehler",
+      "\"song\""
+     ],
+     "explain": "Mit Anführungszeichen ist song einfach nur Text. Ohne Anführungszeichen meint Python die Variable.",
+     "answer": 0,
+     "mono": true
+    },
+    {
+     "type": "fill",
+     "q": "Speichere „Yara“ in der Variable name und gib sie aus.",
+     "code": "name ___ \"Yara\"\nprint(___)",
+     "solutions": [
+      [
+       "=",
+       "name"
+      ]
+     ],
+     "bank": [
+      "=",
+      "==",
+      "name",
+      "\"name\""
+     ],
+     "explain": "Mit = speicherst du. Im print steht der Name der Variable ohne Anführungszeichen."
+    },
+    {
+     "type": "choice",
+     "q": "Was passiert bei `position = \"Main Vocal\"`?",
+     "options": [
+      "Main Vocal wird in der Variable position gespeichert",
+      "Python vergleicht position mit Main Vocal",
+      "Main Vocal erscheint auf dem Bildschirm",
+      "Es gibt einen Fehler"
+     ],
+     "answer": 0,
+     "explain": "= speichert nur. Angezeigt wird erst etwas, wenn du print benutzt.",
+     "mono": false
+    },
+    {
+     "type": "choice",
+     "q": "Wo steht der Name der Variable?",
+     "options": [
+      "Links vom =",
+      "Rechts vom =",
+      "In den Anführungszeichen",
+      "Egal wo"
+     ],
+     "answer": 0,
+     "explain": "Immer: name = wert. Links der Name, rechts der Inhalt.",
+     "mono": false
+    },
+    {
+     "type": "code",
+     "q": "Erstelle die Variable lieblingsgruppe mit deiner Lieblingsgruppe und gib sie mit print aus.",
+     "starter": "lieblingsgruppe = \"\"\n",
+     "solution": "lieblingsgruppe = \"BLACKPINK\"\nprint(lieblingsgruppe)",
+     "check": {
+      "minLines": 1,
+      "codeIncludes": [
+       "lieblingsgruppe =",
+       "print(lieblingsgruppe)"
+      ]
+     },
+     "hint": "Schreib die Gruppe zwischen die Anführungszeichen. Darunter: print(lieblingsgruppe)",
+     "explain": "Deine erste Variable! Python merkt sich jetzt deine Lieblingsgruppe."
+    }
+   ]
+  },
+  {
+   "id": "e2-l2",
+   "title": "Variablen benutzen",
+   "boss": false,
+   "steps": [
+    {
+     "type": "info",
+     "title": "Mehrere Variablen",
+     "text": "Du kannst so viele Variablen anlegen, wie du willst – und sie mit Kommas zusammen in ein print stecken.",
+     "code": "name = \"Hana\"\nposition = \"Main Dancer\"\nprint(name, \"ist\", position)",
+     "run": true
+    },
+    {
+     "type": "choice",
+     "q": "Was gibt dieses Programm aus?",
+     "code": "gruppe = \"aespa\"\njahr = \"2020\"\nprint(gruppe, \"debütierte\", jahr)",
+     "options": [
+      "aespa debütierte 2020",
+      "gruppe debütierte jahr",
+      "aespadebütierte2020",
+      "Fehler"
+     ],
+     "explain": "Python setzt für gruppe und jahr die gespeicherten Werte ein.",
+     "answer": 0,
+     "mono": true
+    },
+    {
+     "type": "fill",
+     "q": "Ergänze, damit „Lightstick: pink“ erscheint.",
+     "code": "farbe = \"pink\"\nprint(\"Lightstick:\", ___)",
+     "solutions": [
+      [
+       "farbe"
+      ]
+     ],
+     "bank": [
+      "farbe",
+      "\"farbe\"",
+      "pink",
+      "Farbe"
+     ],
+     "explain": "Du willst den Inhalt der Variable, also farbe ohne Anführungszeichen. Nur pink ohne Anführungszeichen wäre ein unbekannter Name."
+    },
+    {
+     "type": "choice",
+     "q": "Was gibt dieses Programm aus?",
+     "code": "a = \"Bang\"\nb = \"Bang\"\nprint(a, b, a)",
+     "options": [
+      "Bang Bang Bang",
+      "a b a",
+      "BangBangBang",
+      "Bang Bang"
+     ],
+     "explain": "Drei Teile im print, dreimal Bang – mit Leerzeichen dazwischen.",
+     "answer": 0,
+     "mono": true
+    },
+    {
+     "type": "bug",
+     "q": "Ein Variablenname ist falsch geschrieben. Wo?",
+     "code": "konzept = \"Y2K\"\nprint(\"Neues Konzept:\")\nprint(konzpt)",
+     "bugLine": 2,
+     "explain": "konzpt ist nicht konzept. Python ist da pingelig: Jeder Buchstabe zählt."
+    },
+    {
+     "type": "info",
+     "title": "Variablen sparen Arbeit",
+     "text": "Steht der Gruppenname 50-mal im Code, änderst du ihn mit einer Variable an **einer** Stelle – und überall ist er neu.",
+     "code": "gruppe = \"@@GRUPPE@@\"\nprint(\"Willkommen bei\", gruppe)\nprint(gruppe, \"liebt euch!\")\nprint(\"Bis bald,\", gruppe)",
+     "run": true
+    },
+    {
+     "type": "code",
+     "q": "Lege die Variablen mitglied und rolle an und gib einen Satz aus wie: Yara ist Producerin",
+     "starter": "mitglied = \"Yara\"\nrolle = \"\"\n",
+     "solution": "mitglied = \"Yara\"\nrolle = \"Producerin\"\nprint(mitglied, \"ist\", rolle)",
+     "check": {
+      "minLines": 1,
+      "includes": [
+       " ist "
+      ],
+      "codeIncludes": [
+       "rolle =",
+       "print(mitglied"
+      ]
+     },
+     "hint": "Fülle rolle aus und schreibe dann: print(mitglied, \"ist\", rolle)",
+     "explain": "Hwaiting! Zwei Variablen, ein Satz."
+    }
+   ]
+  },
+  {
+   "id": "e2-l3",
+   "title": "Werte ändern",
+   "boss": false,
+   "steps": [
+    {
+     "type": "info",
+     "title": "Neuer Wert, alte Box",
+     "text": "Eine Variable kann ihren Inhalt wechseln. Bekommt sie einen neuen Wert, ist der alte weg.\nPython merkt sich immer nur den **neuesten** Wert.",
+     "code": "outfit = \"Schuluniform\"\nprint(outfit)\noutfit = \"Glitzer-Jacke\"\nprint(outfit)",
+     "run": true
+    },
+    {
+     "type": "choice",
+     "q": "Was gibt dieses Programm aus?",
+     "code": "konzept = \"Cute\"\nkonzept = \"Dark\"\nprint(konzept)",
+     "options": [
+      "Dark",
+      "Cute",
+      "Cute\nDark",
+      "Fehler"
+     ],
+     "explain": "Beim print steckt schon Dark in der Box. Cute wurde überschrieben.",
+     "answer": 0,
+     "mono": true
+    },
+    {
+     "type": "order",
+     "q": "Ordne den Code so, dass zuerst „Hana“ und danach „Jun“ erscheint.",
+     "lines": [
+      "vocal = \"Hana\"",
+      "print(vocal)",
+      "vocal = \"Jun\"",
+      "print(vocal)"
+     ],
+     "distractors": [],
+     "explain": "Erst speichern, dann ausgeben, dann den Wert ändern und noch einmal ausgeben.",
+     "accept": [
+      [
+       "vocal = \"Hana\"",
+       "print(vocal)",
+       "vocal = \"Jun\"",
+       "print(vocal)"
+      ]
+     ]
+    },
+    {
+     "type": "choice",
+     "q": "Was gibt dieses Programm aus?",
+     "code": "a = \"Pink\"\nb = a\na = \"Blau\"\nprint(b)",
+     "options": [
+      "Pink",
+      "Blau",
+      "a",
+      "Fehler"
+     ],
+     "explain": "b bekommt den Wert, den a in dem Moment hatte: Pink. Dass a danach Blau wird, ändert b nicht.",
+     "answer": 0,
+     "mono": true
+    },
+    {
+     "type": "fill",
+     "q": "Ändere den Wert, damit zum Schluss „Encore!“ erscheint.",
+     "code": "ruf = \"Zugabe?\"\nruf ___ ___\nprint(ruf)",
+     "solutions": [
+      [
+       "=",
+       "\"Encore!\""
+      ]
+     ],
+     "bank": [
+      "=",
+      "\"Encore!\"",
+      "Encore!",
+      "=="
+     ],
+     "explain": "Mit = und einem neuen String überschreibst du den alten Wert."
+    },
+    {
+     "type": "choice",
+     "q": "Warum heißt eine Variable Variable?",
+     "options": [
+      "Weil sich ihr Wert ändern kann",
+      "Weil sie nur Zahlen speichert",
+      "Weil sie nur einmal benutzt werden darf",
+      "Weil sie immer leer ist"
+     ],
+     "answer": 0,
+     "explain": "Variabel heißt veränderlich. Genau das kann sie.",
+     "mono": false
+    },
+    {
+     "type": "code",
+     "q": "Setze farbe auf \"Pink\", gib sie aus, ändere sie auf \"Lila\" und gib sie noch einmal aus.",
+     "starter": "farbe = \"Pink\"\nprint(farbe)\n",
+     "solution": "farbe = \"Pink\"\nprint(farbe)\nfarbe = \"Lila\"\nprint(farbe)",
+     "check": {
+      "exact": "Pink\nLila"
+     },
+     "hint": "Zwei neue Zeilen: farbe = \"Lila\" und noch einmal print(farbe)",
+     "explain": "Genau! Eine Box, zwei Inhalte – nacheinander."
+    }
+   ]
+  },
+  {
+   "id": "e2-l4",
+   "title": "Gute Namen",
+   "boss": false,
+   "steps": [
+    {
+     "type": "info",
+     "title": "Regeln für Namen",
+     "text": "Variablennamen dürfen Buchstaben, Ziffern und den Unterstrich `_` enthalten.\n**Erlaubt:** `fan_name`, `song2`, `lieblingsfarbe`\n**Verboten:** Leerzeichen (`fan name`), eine Ziffer am Anfang (`2song`), Bindestriche (`fan-name`)\nMehrere Wörter verbindest du mit `_`. Das nennt man **snake_case** – passt zu mir. 🐍",
+     "run": false
+    },
+    {
+     "type": "choice",
+     "q": "Welcher Name ist erlaubt?",
+     "options": [
+      "lieblings_song",
+      "lieblings song",
+      "1song",
+      "lieblings-song"
+     ],
+     "answer": 0,
+     "explain": "Nur lieblings_song hält sich an alle Regeln.",
+     "mono": true
+    },
+    {
+     "type": "choice",
+     "q": "Welcher Name ist NICHT erlaubt?",
+     "options": [
+      "2ne1",
+      "two_ne_one",
+      "gruppe_2",
+      "_geheim"
+     ],
+     "answer": 0,
+     "explain": "Namen dürfen nicht mit einer Ziffer beginnen. Den Gruppennamen 2NE1 speicherst du als Text: gruppe = \"2NE1\"",
+     "mono": true
+    },
+    {
+     "type": "info",
+     "title": "Groß und klein zählt",
+     "text": "`Name` und `name` sind für Python zwei verschiedene Variablen.\nAm einfachsten: Schreib Variablennamen immer klein.",
+     "code": "name = \"Yara\"\nName = \"Baemi\"\nprint(name)\nprint(Name)",
+     "run": true
+    },
+    {
+     "type": "choice",
+     "q": "Was gibt dieses Programm aus?",
+     "code": "song = \"Super Shy\"\nSong = \"Hype Boy\"\nprint(song)",
+     "options": [
+      "Super Shy",
+      "Hype Boy",
+      "Super Shy\nHype Boy",
+      "Fehler"
+     ],
+     "explain": "song und Song sind zwei verschiedene Boxen. Ausgegeben wird die kleine.",
+     "answer": 0,
+     "mono": true
+    },
+    {
+     "type": "bug",
+     "q": "In welcher Zeile steckt der Fehler?",
+     "code": "gruppe = \"ITZY\"\n2debut = \"2019\"\nprint(gruppe)",
+     "bugLine": 1,
+     "explain": "2debut beginnt mit einer Ziffer – das ist als Name verboten. Besser: debut_2019 oder debut_jahr."
+    },
+    {
+     "type": "choice",
+     "q": "Welcher Name passt am besten für die Anzahl der Fans?",
+     "options": [
+      "anzahl_fans",
+      "x",
+      "AnzahlDerFansDieDaWaren",
+      "a1"
+     ],
+     "answer": 0,
+     "explain": "Kurz und verständlich – so weiß jede sofort, was drinsteckt.",
+     "mono": true
+    },
+    {
+     "type": "code",
+     "q": "Lege drei Variablen mit gültigen Namen an: deinen Namen, dein Lieblingsessen und deine Lieblingsfarbe. Gib alle drei in einer Zeile aus.",
+     "starter": "mein_name = \"Yara\"\n",
+     "solution": "mein_name = \"Yara\"\nlieblingsessen = \"Tteokbokki\"\nlieblingsfarbe = \"Lila\"\nprint(mein_name, lieblingsessen, lieblingsfarbe)",
+     "check": {
+      "minLines": 1,
+      "minAssign": 3,
+      "codeIncludes": [
+       "print("
+      ]
+     },
+     "hint": "Drei Zeilen mit name = wert, dann ein print mit allen drei Namen, getrennt durch Kommas.",
+     "explain": "Saubere Namen, sauberer Code. Profi-Style!"
+    }
+   ]
+  },
+  {
+   "id": "e2-l5",
+   "title": "Finale: Idol-Profil",
+   "boss": true,
+   "steps": [
+    {
+     "type": "info",
+     "title": "Era-Finale! 👑",
+     "text": "Byte Entertainment braucht für jedes Mitglied von @@GRUPPE@@ ein Profil.\n@@NAME@@, zeig, was du über Variablen weißt – doppelte XP warten.",
+     "run": false
+    },
+    {
+     "type": "choice",
+     "q": "Was gibt dieses Programm aus?",
+     "code": "name = \"Mina\"\nrolle = \"Rapperin\"\nrolle = \"Leaderin\"\nprint(name, \"-\", rolle)",
+     "options": [
+      "Mina - Leaderin",
+      "Mina - Rapperin",
+      "name - rolle",
+      "Mina-Leaderin"
+     ],
+     "explain": "rolle wurde überschrieben, und die Kommas werden zu Leerzeichen.",
+     "answer": 0,
+     "mono": true
+    },
+    {
+     "type": "fill",
+     "q": "Ergänze den fehlenden Variablennamen.",
+     "code": "mitglied = \"Jun\"\n___ = \"Main Dancer\"\nprint(mitglied, \"ist\", position)",
+     "solutions": [
+      [
+       "position"
+      ]
+     ],
+     "bank": [
+      "position",
+      "\"position\"",
+      "Position",
+      "rolle"
+     ],
+     "explain": "Der Name muss genau so geschrieben sein wie später im print: position, klein."
+    },
+    {
+     "type": "bug",
+     "q": "Finde den Fehler im Profil.",
+     "code": "name = \"Hana\"\nfarbe = \"Mint\nprint(name, farbe)",
+     "bugLine": 1,
+     "explain": "Bei \"Mint fehlt das schließende Anführungszeichen."
+    },
+    {
+     "type": "order",
+     "q": "Baue das Profil, sodass „Hana | Main Vocal“ erscheint.",
+     "lines": [
+      "name = \"Hana\"",
+      "position = \"Main Vocal\"",
+      "print(name, \"|\", position)"
+     ],
+     "distractors": [],
+     "explain": "Erst müssen beide Variablen existieren, dann kommt das print.",
+     "accept": [
+      [
+       "name = \"Hana\"",
+       "position = \"Main Vocal\"",
+       "print(name, \"|\", position)"
+      ],
+      [
+       "position = \"Main Vocal\"",
+       "name = \"Hana\"",
+       "print(name, \"|\", position)"
+      ]
+     ]
+    },
+    {
+     "type": "choice",
+     "q": "Was gibt dieses Programm aus?",
+     "code": "x = \"Hwaiting\"\ny = x\nprint(y, y)",
+     "options": [
+      "Hwaiting Hwaiting",
+      "y y",
+      "x x",
+      "Hwaiting"
+     ],
+     "explain": "y bekommt den Wert von x. Im print steht y zweimal.",
+     "answer": 0,
+     "mono": true
+    },
+    {
+     "type": "code",
+     "q": "Erstelle ein Profil für ein Mitglied deiner Gruppe mit den Variablen name, position und lieblingsessen. Gib es in drei Zeilen aus, zum Beispiel: Name: Hana",
+     "starter": "name = \"\"\nposition = \"\"\nlieblingsessen = \"\"\n",
+     "solution": "name = \"Hana\"\nposition = \"Main Vocal\"\nlieblingsessen = \"Bibimbap\"\nprint(\"Name:\", name)\nprint(\"Position:\", position)\nprint(\"Lieblingsessen:\", lieblingsessen)",
+     "check": {
+      "minLines": 3,
+      "includes": [
+       "Name:",
+       "Position:",
+       "Lieblingsessen:"
+      ],
+      "codeIncludes": [
+       "name)",
+       "position)",
+       "lieblingsessen)"
+      ]
+     },
+     "hint": "Fülle die drei Variablen aus und schreib dann z. B. print(\"Name:\", name)",
+     "explain": "Profil fertig! Era 2 abgeschlossen."
+    }
+   ]
+  }
+ ]
+}
